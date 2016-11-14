@@ -1,8 +1,6 @@
-(Coming soon)
+# REST API with Falcon, MongoDB and PyPy
 
-# Base for REST API with PyPy, Falcon and MongoDB
-
-Project Template to create high-performance RESTful web services in Python.
+Project Template for a high-performance RESTful web service in Python.
 
 
 ## Setup
@@ -14,9 +12,9 @@ pip install -r requirements.txt
 ```
 
 
-## Run Development Server (Gunicorn)
+## Run Development Server
 
 ```
 ./run_server.sh
 ```
-
+`Gunicorn` is used as WSGI HTTP Server.
