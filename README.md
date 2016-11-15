@@ -17,4 +17,4 @@ pip install -r requirements.txt
 ```
 ./run_server.sh
 ```
-`Gunicorn` is used as WSGI HTTP Server.
+Listening at http://localhost:8000. `Gunicorn` is used as WSGI HTTP Server.
