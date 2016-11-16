@@ -5,8 +5,8 @@ Project Template for a high-performance RESTful web service in Python.
 
 ## Setup
 
-* Install `PyPy` (or `Python 2.7`) and `MongoDB`
-* Update database credentials at `src/settings.py`
+* Install `PyPy` (or use `Python 2.7`) and `MongoDB`
+* Check database credentials at `src/settings.py`
 
 ```
 virtualenv -p /usr/bin/pypy env
@@ -20,4 +20,4 @@ pip install -r requirements.txt
 ```
 ./run_server.sh
 ```
-Listening at http://localhost:8000. `Gunicorn` is used as WSGI HTTP Server.
+Listening at [localhost:8000](http://localhost:8000). `Gunicorn` is used as WSGI HTTP Server.
