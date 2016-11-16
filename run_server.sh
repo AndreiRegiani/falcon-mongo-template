@@ -1,3 +1,3 @@
 clear
 cd src/
-gunicorn routes:api
+gunicorn routes:api --reload
