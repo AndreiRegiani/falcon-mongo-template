@@ -1,3 +1,4 @@
 clear
 cd src/
-gunicorn routes:api --reload
+echo "Loading..."
+gunicorn routes:api --reload  # live-reload
