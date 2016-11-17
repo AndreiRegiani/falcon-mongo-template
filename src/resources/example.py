@@ -1,11 +1,9 @@
 import falcon
 
-from helper import jsonify
 from models import ExampleModel
 
 
 class ExampleResource(object):
-
     def on_get(self, req, resp):
         rows = []
         for i in ExampleModel.objects:
@@ -15,18 +13,23 @@ class ExampleResource(object):
             )
             rows.append(row)
 
-        resp.data = jsonify(examples=rows)
+        resp.json = rows
         resp.status = falcon.HTTP_200
 
 
     def on_post(self, req, resp):
-        row = ExampleModel()
-        row.email = 'test@test.com'
-        row.first_name = 'Andrei'
-        row.last_name = 'Regiani'
+        try:
+            email = req.json['email']
+        except KeyError, e:
+            raise falcon.HTTPBadRequest(
+                'Missing JSON Field',
+                'Field %s is required' % e
+            )
+
+        row = ExampleModel(email=email)
         row.save()
 
-        resp.data = jsonify(id=str(row.id))
+        resp.json = dict(id=str(row.id))
         resp.status = falcon.HTTP_201
 
 

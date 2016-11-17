@@ -2,11 +2,11 @@ import falcon
 import mongoengine as mongo
 
 import settings
-from middlewares.json import JsonMiddleware
+from middlewares.jsonify import JsonifyMiddleware
 
 
 api = falcon.API(middleware=[
-    JsonMiddleware(),
+    JsonifyMiddleware(),
 ])
 
 mongo.connect(

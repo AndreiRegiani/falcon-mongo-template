@@ -7,7 +7,7 @@ Project Template for a high-performance RESTful web service in Python.
 
 * Install [PyPy](http://pypy.org/) (or just use `Python 2.7`) and [MongoDB](https://www.mongodb.com/)
 * Check database credentials at `src/settings.py`
-* Install dependencies on a virtualenv:
+* Install dependencies on a `virtualenv`:
 
 ```
 virtualenv -p /usr/bin/pypy env
@@ -23,9 +23,9 @@ pip install -r requirements.txt
 ```
 Listening at [localhost:8000](http://localhost:8000). `Gunicorn` is used as WSGI HTTP Server.
 
-Demo routes:
+**Demo routes:**
 
-* `POST /api/example` create an item
+* `POST /api/example  {"email": "value"}` create an item
 * `GET  /api/example` return all items
 
 
