@@ -7,10 +7,10 @@ class ExampleResource(object):
     def on_get(self, req, resp):
         rows = []
         for i in ExampleModel.objects:
-            row = dict(
-                id = str(i.id),
-                email = i.email
-            )
+            row = {
+                'id': str(i.id),
+                'email': i.email
+            }
             rows.append(row)
 
         resp.json = rows
@@ -29,7 +29,7 @@ class ExampleResource(object):
         row = ExampleModel(email=email)
         row.save()
 
-        resp.json = dict(id=str(row.id))
+        resp.json = {'id': str(row.id)}
         resp.status = falcon.HTTP_201
 
 
