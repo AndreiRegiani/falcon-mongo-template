@@ -26,16 +26,10 @@ class ExampleResource(object):
                 'Field %s is required' % e
             )
 
-        row = ExampleModel(email=email)
+        row = ExampleModel(
+            email=email
+        )
         row.save()
 
         resp.json = {'id': str(row.id)}
         resp.status = falcon.HTTP_201
-
-
-    def on_patch(self, req, resp):
-        pass
-
-
-    def on_delete(self, req, resp):
-        pass
