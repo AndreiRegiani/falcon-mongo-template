@@ -1,5 +1,6 @@
 import falcon
 
+from decorators import require
 from models import ExampleModel
 
 
@@ -8,8 +9,8 @@ class ExampleResource(object):
         rows = []
         for i in ExampleModel.objects:
             row = {
-                'id': str(i.id),
-                'email': i.email
+                'email': i.email,
+                'name': i.name
             }
             rows.append(row)
 
@@ -17,17 +18,11 @@ class ExampleResource(object):
         resp.status = falcon.HTTP_200
 
 
+    @require('email', 'name')
     def on_post(self, req, resp):
-        try:
-            email = req.json['email']
-        except KeyError, e:
-            raise falcon.HTTPBadRequest(
-                'Missing JSON Field',
-                'Field %s is required' % e
-            )
-
         row = ExampleModel(
-            email=email
+            email = req.json['email'],
+            name = req.json['name']
         )
         row.save()
 
