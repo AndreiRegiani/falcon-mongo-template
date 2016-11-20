@@ -1,3 +1,5 @@
+DEBUG = True
+
 MONGO = {
     'DATABASE': 'database-1',
     'HOST': 'localhost',
