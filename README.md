@@ -1,6 +1,6 @@
 # REST API with Falcon, MongoDB and PyPy
 
-Project Template for a high-performance RESTful web service in Python.
+Project Template for a high-performance RESTful web service in Python, using [falcon-jsonify](https://github.com/AndreiRegiani/falcon-jsonify) middleware and [MongoEngine](https://github.com/MongoEngine/mongoengine) Object-Document-Mapper.
 
 
 ## Setup
