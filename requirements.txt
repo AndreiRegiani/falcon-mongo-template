@@ -1,6 +1,6 @@
 cffi==1.9.0
 falcon==1.1.0
-falcon-jsonify==0.1.1
+falcon-jsonify==1.0
 greenlet==0.4.10
 gunicorn==19.6.0
 mongoengine==0.10.6
