@@ -2,7 +2,7 @@ cffi==1.9.0
 falcon==1.1.0
 falcon-jsonify==1.1
 greenlet==0.4.10
-gunicorn==19.6.0
+gunicorn==22.0.0
 mongoengine==0.10.6
 pymongo==4.6.3
 python-mimeparse==1.6.0
